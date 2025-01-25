@@ -15,8 +15,8 @@ services:
         - name: http
           port: 80
           targetPort: 8080
-    containers:
-      - name: geoserver
-        image: camptocamp/geoserver:latest
-        ports:
-          - containerPort: 8080
+    container:
+      name: geoserver
+      image: camptocamp/geoserver:latest
+      ports:
+        - containerPort: 8080
