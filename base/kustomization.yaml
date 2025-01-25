@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: geoserver
+
+resources:
+  - namespace.yaml
+
+helmCharts:
+  - name: geoserver
+    repo:
+    releaseName: geoservercloud
+    namespace: geoserver
+    version: 2.10.0 # Use the desired version
