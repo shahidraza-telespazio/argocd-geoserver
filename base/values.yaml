@@ -16,8 +16,7 @@ ingress:
         - geoserver.example.com
 
 persistence:
-  accessModes:
-    - ReadWriteOnce
+  accessModes: ReadWriteOnce
   storageClass: ""
   capacity: 10Gi
 
