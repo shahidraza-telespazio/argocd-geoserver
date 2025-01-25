@@ -7,9 +7,9 @@ resources:
   - namespace.yaml
 
 helmCharts:
-  - name: application
-    repo: https://camptocamp.github.io/helm-application/
-    releaseName: geoservercloud
+  - name: geoserver
+    repo: https://opensource.ncsa.illinois.edu/charts/
+    releaseName: ncsa
     namespace: geoserver
-    version: 2.10.0 # Use the desired version
+    version: 1.2.0
     valuesFile: values.yaml

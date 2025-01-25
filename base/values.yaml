@@ -1,6 +1,7 @@
-global:
-  image:
-    pullPolicy: IfNotPresent
+image:
+  repository: docker.osgeo.org/geoserver
+  tag: latest
+  pullPolicy: IfNotPresent
 
 serviceAccount:
   create: true
@@ -8,14 +9,17 @@ serviceAccount:
 
 ingress:
   enabled: true
+  host: geoserver.example.com
+  tls:
+    - secretName: geoserver-tls
+      hosts:
+        - geoserver.example.com
 
-services:
-  geoserver:
-    enabled: true
-    replicaCount: 1
-    service:
-      type: ClusterIP
-      ports:
-        - name: http
-          port: 80
-          targetPort: 8080
+persistence:
+  accessModes:
+    - ReadWriteOnce
+  storageClass: ""
+  capacity: 10Gi
+
+geoserverUser: admin
+geoserverPassword: geoserver
