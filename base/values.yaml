@@ -1,0 +1,10 @@
+serviceAccount:
+  create: true
+  name: geoserver-sa
+
+ingress:
+  enabled: true
+  hosts:
+    - host: geoserver.example.com
+      paths:
+        - /

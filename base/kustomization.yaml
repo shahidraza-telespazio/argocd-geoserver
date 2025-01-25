@@ -12,3 +12,4 @@ helmCharts:
     releaseName: geoservercloud
     namespace: geoserver
     version: 2.10.0 # Use the desired version
+    valuesFile: values.yaml
