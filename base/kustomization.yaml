@@ -7,8 +7,8 @@ resources:
   - namespace.yaml
 
 helmCharts:
-  - name: geoserver
-    repo:
+  - name: application
+    repo: https://camptocamp.github.io/helm-application/
     releaseName: geoservercloud
     namespace: geoserver
     version: 2.10.0 # Use the desired version
