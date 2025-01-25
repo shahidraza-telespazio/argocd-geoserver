@@ -4,3 +4,14 @@ serviceAccount:
 
 ingress:
   enabled: true
+
+services:
+  geoserver:
+    enabled: true
+    replicaCount: 1
+    service:
+      type: ClusterIP
+      ports:
+        - name: http
+          port: 80
+          targetPort: 8080
