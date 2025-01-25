@@ -4,7 +4,3 @@ serviceAccount:
 
 ingress:
   enabled: true
-  hosts:
-    - host: geoserver.example.com
-      paths:
-        - /
