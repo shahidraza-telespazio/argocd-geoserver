@@ -1,6 +1,6 @@
 image:
   repository: docker.osgeo.org/geoserver
-  tag: latest
+  tag: 2.26.1
   pullPolicy: IfNotPresent
 
 serviceAccount:
